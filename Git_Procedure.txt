@@ -1,0 +1,36 @@
+[Create New User]
+$ groupadd giriraj
+# Add new user
+$ useradd -G giriraj -d /home/test -m -s /bin/bash gituser
+# change password
+$ passwd gituser
+
+[Create Bare Repository]
+$ pwd
+$ mkdir git_repository
+$ cd git_repository
+$ mkdir project.git
+$ cd project.git/
+$ git --bare init
+>> Initialized empty Git repository in /home/gituser-m/project.git/
+
+[Generate Public/Private RSA Key Pair]
+$ pwd
+>> /home/test
+$ ssh-keygen
+>> press three time ENTER
+
+[Create login account for git]
+gmail: kishorexxx@gmail.com
+password: gkus#9036
+link: https://github.com/giriraj054/Personal_data.git
+
+[Create new branch]
+$ git checkout -b Git_Procedure
+$ touch git_procedure.txt
+$ git add git_procedure.txt
+$ git commit -m 'initial commit'
+
+[upload]
+$ git remote add origin https://github.com/giriraj054/Personal_data.git
+$ git push origin master
